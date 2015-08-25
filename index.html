@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- always place the bootstrap stylesheet link BEFORE my stylesheet as shown below-->
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Oswald|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WAR</title>
+    <meta charset="utf-8">
+   
+  </head>
+
+  <body> 
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <button class="getCards" type="button">Get New Decks</button>
+      </div>
+      <div class="col-md-1"></div>
+      
+      <div class="col-md-4">
+      <div id="scoreP1" class="col-md-6">
+        <label class="score">Player One Score</label>
+          <!-- player one score -->
+      </div>
+      <div id="scoreP2" class="col-md-6">
+          <!-- player two score -->
+          <label class="score">Player Two Score</label>
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-1"></div>
+      <div class="col-md-4"> 
+        <div class="deckP1">
+        <img="../playing-card-blue2.jpg">
+        <!-- player 1 deck of cards -->
+      </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <div class="deckP2">
+        <!-- player 2 deck of cards -->
+          <img="../playing-card-red2.jpg">
+        </div>
+      </div>
+    </div>
+      
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <button id="drawP1" class="drawCard" type="button">Player 1 Draw</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <button id="drawP2" class="drawCard" type="button">Player 2 Draw</button>
+      </div>
+    </div>
+    <div class="row">
+      <div id="scoreP1" class="col-md-6">
+          <!-- player one score -->
+      </div>
+      <div id="scoreP2" class="col-md-6">
+        <!-- player two score -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <div class="cardP1">
+          <!-- player one card -->
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <div class="cardP2">
+          <!-- player two card -->
+        </div>
+      </div>
+    </div>
+ 
+    
+       
+    <script data-main="javascripts/main" src="lib/bower_components/requirejs/require.js"></script> 
+  </body>
+</html>
+
