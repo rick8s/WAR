@@ -1,3 +1,9 @@
+.row {
+  padding-top: 10px;
+  text-align: center;
+  background-color: lightyellow; }
 
+.collapse {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */

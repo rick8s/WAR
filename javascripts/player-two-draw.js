@@ -1,18 +1,19 @@
 define(function(require) {
   var $ = require("jquery");
+  var p2cardVal;
+  var counters = require("counters");
 
   return {
     p2draw: function () {
       var deckTwoId = $('.deckP2').attr('id');
       var p2tempVal = 0;
 
-
-     $.ajax({
-
+    // determine the value of player twos card then return it for comparison  
+    $.ajax({
       url: "http://deckofcardsapi.com/api/deck/" + deckTwoId + "/draw/?count=1"
       }).done(function(data) {
         console.log("data", data);
-        $(".cardP2").html(data.cards[0].images.png);
+        $(".cardP2").html("<img src='" + data.cards[0].images.png + "'>");
 
           if (data.cards[0].value <= 10) {
             p2tempVal = data.cards[0].value;
@@ -35,10 +36,18 @@ define(function(require) {
           }
           // set global variable to current card value for use in counter module
           p2cardVal = p2tempVal;
+         
 
           console.log("this is p2Value", p2tempVal);
           console.log("this is p2cardVal:", p2cardVal);
+
+   
       });
-    } 
-  };
+    },
+      
+    getValue: function() { 
+      counters.addScore();
+        return p2cardVal;
+    }       
+  };  
 });
